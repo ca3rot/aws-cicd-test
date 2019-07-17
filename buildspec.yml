@@ -1,7 +1,7 @@
 version: 0.2
 
 phases:
-  prebuild:
+  pre_build:
     commands:
       - npm install
 
@@ -10,4 +10,7 @@ phases:
       - npm test
 
 artifacts:
-    files: imagedefinitions.json
+    files: 
+      - node_modules/*
+      - routes/*
+      - package.json
