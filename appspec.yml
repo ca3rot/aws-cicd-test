@@ -5,11 +5,10 @@ files:
     destination: /home/ec2-user/aws-cicd-test/routes
   - source: /package.json
     destination: /home/ec2-user/aws-cicd-test/package.json
+  - source: /app.js
+    destination: /home/ec2-user/aws-cicd-test/app.js
 
 hooks:
-#  ApplicationStop:
-#    - location: deployment_scripts/stop.sh
-#      runas: ec2-user
   BeforeInstall:
     - location: deployment_scripts/prepare.sh
       runas: ec2-user
