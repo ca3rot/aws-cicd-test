@@ -9,9 +9,13 @@ files:
 hooks:
   ApplicationStop:
     - location: deployment_scripts/stop.sh
+      runas: ec2-user
   BeforeInstall:
     - location: deployment_scripts/prepare.sh
+      runas: ec2-user
   AfterInstall:
     - location: deployment_scripts/deploy.sh
+      runas: ec2-user
   ApplicationStart:
     - location: deployment_scripts/start.sh
+      runas: ec2-user
