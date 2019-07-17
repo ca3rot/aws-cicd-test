@@ -4,9 +4,9 @@ files:
   - source: /routes
     destination: /home/ec2-user/aws-cicd-test/routes
   - source: /package.json
-    destination: /home/ec2-user/aws-cicd-test/package.json
+    destination: /home/ec2-user/aws-cicd-test/
   - source: /app.js
-    destination: /home/ec2-user/aws-cicd-test/app.js
+    destination: /home/ec2-user/aws-cicd-test/
 
 hooks:
   BeforeInstall:
