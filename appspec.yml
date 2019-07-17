@@ -9,8 +9,8 @@ files:
 hooks:
   ApplicationStop:
     - location: deployment_scripts/stop.sh
-#  BeforeInstall:
-#    - location: deployment_scripts/prepare.sh
+  BeforeInstall:
+    - location: deployment_scripts/prepare.sh
   AfterInstall:
     - location: deployment_scripts/deploy.sh
   ApplicationStart:
