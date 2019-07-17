@@ -14,6 +14,7 @@ phases:
 
 artifacts:
     files: 
-      - node_modules/*
       - routes/*
       - package.json
+      - appspec.yml
+      - deployment_scripts/*

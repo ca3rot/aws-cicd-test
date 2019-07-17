@@ -1,14 +1,16 @@
 version: 0.0
 os: linux
 files: 
-  - source: /
-    destination: /home/ec2-user/aws-cicd-test/
+  - source: /routes
+    destination: /home/ec2-user/aws-cicd-test/routes
+  - source: /package.json
+    destination: /home/ec2-user/aws-cicd-test/package.json
 
 hooks:
   ApplicationStop:
     - location: deployment_scripts/stop.sh
-  BeforeInstall:
-    - location: deployment_scripts/prepare.sh
+#  BeforeInstall:
+#    - location: deployment_scripts/prepare.sh
   AfterInstall:
     - location: deployment_scripts/deploy.sh
   ApplicationStart:
